@@ -46,17 +46,21 @@ server.listen(process.env.PORT || 8080, function (err) {
   	} else {
   		console.log('info: Express server started on %s: %s', server.address().address, server.address().port);
   		console.log('info: App running in '+process.env.NODE_ENV+ ' mode.');
-  		getContent(function(data, tabletop) {
-	  		//console.log(JSON.stringify(tabletop,null,4));
-  		});
   	}
 });
 
 //RESTful routes
 app.get('/', function(req, res){
-  res.render('index', {
-    title: 'Peter Browse'
-  });
+	getContent(function(data, tabletop) {
+		res.render('index', {
+			title: 'Peter Browse',
+			data: console.log(data);
+		});
+	});
+});
+
+app.get('/getProjects', function(req, res) {
+	
 });
 
 //Content Requesting Function

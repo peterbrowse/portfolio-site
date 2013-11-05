@@ -1,9 +1,25 @@
-$font-stack:    Helvetica, sans-serif;
-$primary-color: #ececec;
-$secondary-color: #FFF;
+$first-color: #464646;
+$second-color: #8d8d8d;
+$third-color: #e5e5e5;
+$forth-color: #ffffff;
 
-body {
-  font: 100% $font-stack;
-  color: $secondary-color;
-  background-color: $primary-color;
+$outter-spacing: 15px;
+
+@import 'reset';
+
+html, body {
+	background-color: $forth-color;
+	height: 100%;
+	width: 100%;
 }
+
+.content {
+	height: 100%;
+	background-color: $forth-color;
+}
+
+.content-inner {
+	height: 100%;
+	background-color: $third-color;
+}
+
