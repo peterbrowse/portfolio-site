@@ -53,14 +53,9 @@ server.listen(process.env.PORT || 8080, function (err) {
 app.get('/', function(req, res){
 	getContent(function(data, tabletop) {
 		res.render('index', {
-			title: 'Peter Browse',
-			data: console.log(data);
+			title: 'Peter Browse'
 		});
 	});
-});
-
-app.get('/getProjects', function(req, res) {
-	
 });
 
 //Content Requesting Function
